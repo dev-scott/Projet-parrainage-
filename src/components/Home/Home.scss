@@ -1,0 +1,124 @@
+.contain_home {
+
+    // width: 100vw;
+    // height: 100vh;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .slot {
+        width: 100%;
+        height: 60%;
+        background-color: yellow;
+
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .row {
+
+            // flex: 1 0 auto;
+            width: 400px;
+            height: 600px;
+            margin: 0 5px 0 5px;
+            overflow: hidden;
+            border: solid 2px #ffd9009c;
+            background: linear-gradient(0deg, rgb(204, 203, 203) 0%, rgb(255, 255, 255)20%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 80%, rgb(204, 203, 203) 100%);
+
+
+            .ringEnd {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 600px;
+                // line-height: 525px;
+                text-align: center;
+                font-size: 4em;
+                animation: stop .5s ease-out forwards;
+                // background-color: blue;
+                height: 100%;
+
+                img {
+                    height: 600px;
+                }
+            }
+
+            .ringMoving {
+                height: 600px;
+                line-height: 200px;
+                text-align: center;
+                font-size: 4em;
+                animation: goaround 0.2s linear infinite;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                // background-color: red;
+                img {
+                    height: 600px;
+                }
+            }
+
+            @keyframes goaround {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(-1000px);
+                }
+            }
+
+            @keyframes stop {
+                0% {
+                    transform: translateY(0)
+                }
+
+                50% {
+                    transform: translateY(-90px)
+                }
+
+                75% {
+                    transform: translateY(-80px)
+                }
+
+                100% {
+                    transform: translateY(0px)
+                }
+            }
+        }
+
+    }
+
+    .button {
+
+        width: 100%;
+        height: 40%;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+        button {
+
+            width: 150px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: #fff;
+            background-color: black;
+
+        }
+
+    }
+
+}
